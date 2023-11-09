@@ -1,6 +1,5 @@
-variable "directory" {
+variable "aws_account_id" {
   type = string
-  default = "infrastructure"
 }
 
 variable "organization" {
@@ -10,17 +9,17 @@ variable "organization" {
 
 variable "repository" {
   type = string
-  default = "monorepo"
+  default = "infrastructure"
 }
 
 variable "set_of_clouds" {
   type = set(string)
-  default = toset(["aws", "azure"])
+  default = ["aws", "azure"]
 }
 
 variable "set_of_environments" {
   type = set(string)
-  default = toset(["dev", "prod"])
+  default = ["dev", "prod"]
 }
 
 variable "terraform_version" {
